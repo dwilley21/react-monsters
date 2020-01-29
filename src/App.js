@@ -12,6 +12,8 @@ class App extends Component {
         monsters: [],
         searchField: ''
         };
+
+      this.handleChange = this.handleChange.bind(this);
     }
 
     componentDidMount(){
@@ -23,7 +25,7 @@ class App extends Component {
     handleChange(e) {
      this.setState({ searchField: e.target.value})
     }
-    
+
   render(){
     const { monsters, searchField } = this.state;
     const filteredMonsters = monsters.filter( monster =>
